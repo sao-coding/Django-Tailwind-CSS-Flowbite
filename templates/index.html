@@ -1,0 +1,39 @@
+<!-- templates/index.html -->
+
+{% extends "_base.html" %}
+{% load static %}
+{% block content %}
+<main class="layout">
+    <div class="recent-posts" id="scroll-element">
+        <div class="post-card wow animate__zoomIn">
+
+            <div class="post-info">
+                <div class="post-title">
+                    <a class="post-link" href="#">
+                        <h2>第一篇文章</h2>
+                    </a>
+                </div>
+                <div class="post-meta-date">
+                    <div class="post-created">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>發表於: 2022-11-13(星期日) 20:55:19</span>
+                    </div>
+                    <div class="post-updated">
+                        <i class="fas fa-history"></i>
+                        <span>更新於: 2022-11-15(星期二) 01:18:12</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <span>test</span>
+                </div>
+            </div>
+            <div class="post-cover">
+                <a class="post-link" href="#">
+                    <img class="card-bg" src="{% static 'images/home.jpg' %}" alt="">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</main>
+{% endblock content %}
