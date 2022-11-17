@@ -22,49 +22,52 @@
 
   <!-- Add this -->
 
-  <nav class="bg-[#006aa6] border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 max-md:absolute max-md:inset-x-0 max-md:bottom-0">
-    <div class="container flex flex-wrap justify-between items-center mx-auto">
-      <div class="md:hidden">&emsp;&emsp;&emsp;</div>
-      <a href="https://flowbite.com/" class="flex items-center max-md:hidden">
-        <img src="https://www.dcard.tw/_next/static/media/logo.8b5bbef2.svg" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+  <nav
+    class="bg-[#006aa6] border-gray-200 px-2 sm:px-4 md:py-2.5 rounded dark:bg-gray-900 max-md:fixed max-md:inset-x-0 max-md:bottom-0">
+    <div class="container md:flex md:flex-wrap md:justify-between items-center mx-auto">
+      <a href="/" class="flex items-center max-md:hidden">
+        <img src="{% static 'images/takming.png' %}" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">德明</span>
       </a>
-      <div class="flex items-center order-2">
-        <button type="button"
-          class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-          id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
-          data-dropdown-placement="bottom">
-          <span class="sr-only">Open user menu</span>
-          <img class="w-8 h-8 rounded-full" src="{% static 'images/home.jpg' %}" alt="user photo">
-        </button>
-        <!-- Dropdown menu -->
-        <div
-          class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
-          id="user-dropdown">
-          <div class="py-3 px-4">
-            <span class="block text-sm text-gray-900 dark:text-white">唯一</span>
-            <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">only@sao-x.com</span>
+      <div class="flex max-md:justify-between">
+        <div class="md:hidden">&emsp;&emsp;&emsp;</div>
+        <div class="flex items-center order-2">
+          <!-- <div class="max-md:hidden">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div> -->
+          <button type="button"
+            class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+            data-dropdown-placement="bottom">
+            <span class="sr-only">Open user menu</span>
+            <img class="w-8 h-8 rounded-full" src="{% static 'images/home.jpg' %}" alt="user photo">
+          </button>
+          <!-- Dropdown menu -->
+          <div
+            class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600"
+            id="user-dropdown">
+            <div class="py-3 px-4">
+              <span class="block text-sm text-gray-900 dark:text-white">唯一</span>
+              <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">only@sao-x.com</span>
+            </div>
+            <ul class="py-1" aria-labelledby="user-menu-button">
+              <li>
+                <a href="profile/"
+                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">功能表</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">管理員</a>
+              </li>
+              <li>
+                <a href="#"
+                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">登出</a>
+              </li>
+            </ul>
           </div>
-          <ul class="py-1" aria-labelledby="user-menu-button">
-            <li>
-              <a href="#"
-                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">功能表</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">管理員</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">登出</a>
-            </li>
-          </ul>
-        </div>
-        <!-- <button data-collapse-toggle="mobile-menu-2" type="button"
+          <!-- <button data-collapse-toggle="mobile-menu-2" type="button"
           class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="mobile-menu-2" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
@@ -75,45 +78,57 @@
               clip-rule="evenodd"></path>
           </svg>
         </button> -->
-      </div>
-      <div class="justify-between items-center md:flex md:w-auto md:order-1">
-        <ul
-          class="md:bg-[#006aa6] flex p-4 rounded-lg text-sm md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#"
-              class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-              aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <polyline points="5 12 3 12 12 3 21 12 19 12"></polyline>
-                <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
-                <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
-             </svg></a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-                <line x1="9" y1="12" x2="15" y2="12"></line>
-                <line x1="12" y1="9" x2="12" y2="15"></line>
-             </svg></a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <circle cx="10" cy="10" r="7"></circle>
-                <line x1="21" y1="21" x2="15" y2="15"></line>
-             </svg></a>
-          </li>
-        </ul>
+        </div>
+        <div class="justify-between items-center md:flex md:w-auto md:order-1">
+          <ul
+            class="md:bg-[#006aa6] flex p-4 rounded-lg text-sm md:flex-row md:space-x-8 md:mt-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <a href="/"
+                class="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24"
+                  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <polyline points="5 12 3 12 12 3 21 12 19 12"></polyline>
+                  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+                  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-plus" width="24"
+                  height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <line x1="9" y1="12" x2="15" y2="12"></line>
+                  <line x1="12" y1="9" x2="12" y2="15"></line>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                class="block py-2 pr-4 pl-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24"
+                  height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <circle cx="10" cy="10" r="7"></circle>
+                  <line x1="21" y1="21" x2="15" y2="15"></line>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
 
   <!-- End of new HTML -->
 
-  <div class="container mx-auto mt-4">
+  <div class="md:container md:mx-auto mt-4">
     {% block content %}
     {% endblock content %}
   </div>
